@@ -67,13 +67,6 @@ Leia o arquivo [CONTRIBUTING.md](./CONTRIBUTING.md) para saber como configurar o
 
 ---
 
-## 🧾 Licença
-
-Este projeto é distribuído sob a licença que você definir (por exemplo, MIT, GPL, etc.).  
-Veja o arquivo `LICENSE` para mais informações.
-
----
-
 ## 📚 Sobre o projeto
 
 Este projeto está sendo desenvolvido como parte de uma pesquisa para resolver o problema de logística na coleta de lixo no munícipio de Caicó-RN Brasil. 
