@@ -14,4 +14,4 @@ class Veiculo(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     placa: Mapped[str] = mapped_column(String(7), unique=True)
-    # o resto das colunas
+    # (Godofredo) Eu não sei exatamente quais outras colunas deveriam existir aqui
