@@ -23,6 +23,24 @@ def veiculos():
             list.append(veiculo)
         return jsonify({"message": "Requisicao autorizada", "list": list})
 
+@app.route("/veiculo/<int:id>", methods=["POST", "GET"])
+def editar_veiculo(id):
+    veiculo = db.get(Veiculo, id)
+    if not veiculo:
+        return jsonify({"message": "Caminhão não encontrado"}), 404
+    
+    data = request.get_json()
+    
+    placa = data.get("placa", veiculo.placa)
+    
+    veiculo.placa = placa
+    
+    db.commit()
+    
+    return jsonify({"message": "Caminhão atualizado com sucesso", "veiculo": {
+        "id": veiculo.id,
+        "placa": veiculo.placa
+    }})
 
 @app.route("/veiculo/add", methods=["POST"])
 def adicionar_veiculo():
